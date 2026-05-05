@@ -1,4 +1,4 @@
-Pour que la barre de recherche marche veillez respecter l'ortohographe des produits.
+Pour que la barre de recherche marche veillez respecter l'orthographe des produits.
 
 # AuPetitVillage
 
