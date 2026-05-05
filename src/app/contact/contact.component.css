@@ -1,0 +1,69 @@
+/* Style du formulaire.    /* Espacement intérieur du bloc formulaire */
+.contact-form {padding: 20px 30px;}
+
+/* Style des labels .Chaque label prend toute la ligne */
+/* Espace au-dessus */
+.contact-form label { display: block;margin-top: 10px;font-weight: bold;}
+
+/* Style des champs input et textarea */
+.contact-form input,
+.contact-form textarea {width: 100%; padding: 8px;
+
+margin-top: 5px; border: 1px solid #ccc;
+    
+border-radius: 5px;
+
+/* Empêche le redimensionnement (surtout pour textarea) */
+resize: none;
+}
+
+/* Style spécifique au textarea */
+.contact-form textarea {height: 100px;}
+
+/* Style du bouton */
+.contact-form button {
+ margin-top: 15px; width: 100%;
+padding: 10px;border: none;
+background: #DA001E;
+ color: white;
+ font-size: 16px;
+border-radius: 5px;
+cursor: pointer;}
+
+/* Style général du formulaire */
+form {
+width: 60%;
+    
+height: auto;
+    
+ margin-left: auto;
+margin-right: auto;
+
+text-decoration: underline;
+    
+font-family: Comfortaa, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+    /* Rend le bouton légèrement transparent */
+
+.contact-form button:hover { opacity: 0.8;}
+
+
+/* Style des sections */
+section {
+  width: 55%;
+    
+  margin-left: auto;
+  margin-right: auto;
+    
+text-decoration: underline;
+    
+  font-family: Bubbleboddy Neue Trial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Style des images */
+img { width: 15rem; height: auto; border-radius: 15%;}
+
+/* Style des titres h1 */
+h1 {color: #FDD90B;}

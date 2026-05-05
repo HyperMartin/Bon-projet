@@ -1,0 +1,91 @@
+<!-- Section principale avec un espacement vertical (padding) -->
+<section class="py-5">
+
+  <div class="container">
+    
+    <!-- Titre principal centré -->
+    <h1 class="text-center mb-4">Au petit village</h1>
+
+    <!-- Texte d’introduction centré -->
+    <p class="text-center mb-5">
+      Bienvenue chez Au petit village, votre boutique de figurines inspirées de
+      l’univers d’Astérix et Obélix. Découvrez des créations faites main pour
+      les amoureux de l’aventure gauloise.
+    </p>
+
+    <!-- Sous-titre de la section produits -->
+    <h2 class="mb-4" style="text-decoration: underline;">Nos figurines</h2>
+
+    <!-- Zone de tri des produits -->
+    <div class="mb-4">
+
+      <!-- Label associé au menu déroulant -->
+      <label 
+        for="sortPrice" 
+        class="form-label" 
+        style="text-decoration: underline;">
+        Trier par prix :
+      </label>
+
+      <!-- Select pour choisir l’ordre de tri -->
+      <select 
+        id="sortPrice" 
+        class="form-select" 
+        (change)="onSortChange($event)" 
+        style="border: 3px solid blue;">
+
+        <option value="">Choisir un tri</option>
+        <option value="asc">Prix croissant</option>
+        <option value="desc">Prix décroissant</option>
+      </select>
+    </div>
+
+    <!-- Grille Bootstrap pour afficher les produits -->
+    <div class="row g-4">
+
+      <!-- Boucle Angular pour parcourir les produits -->
+      <div
+        class="col-12 col-sm-6 col-lg-4"
+        *ngFor="let product of products 
+        | filterByName:searchTerm 
+        | sortByPrice:sortOrder">
+
+        <!-- Carte produit -->
+        <div class="card h-100 shadow-sm" style="border: 3px solid black;">
+
+          <!-- Image du produit -->
+          <img
+            [src]="product.image"       
+            [alt]="product.name"        
+            class="card-img-top p-3"
+          >
+
+          <!-- Contenu de la carte -->
+          <div class="card-body d-flex flex-column">
+
+            <!-- Nom du produit -->
+            <h3 class="card-title fs-5">{{ product.name }}</h3>
+
+            <!-- Description -->
+            <p class="card-text">{{ product.description }}</p>
+
+            <!-- Prix -->
+            <p class="fw-bold">{{ product.price }} €</p>
+
+            <!-- Bouton vers la page détail -->
+            <span id="Lien">           
+              <a
+                class="btn mt-auto"
+                [routerLink]="['/produit', product.id]"  
+                style="background-color: #F9D0A3; color: #151217;">
+                Voir le détail
+              </a>
+            </span> 
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

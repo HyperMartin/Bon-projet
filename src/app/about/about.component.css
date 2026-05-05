@@ -1,0 +1,22 @@
+/* CSS simple pour la page "À propos" */
+/* Style général pour les sections */
+section {
+font-family: "Comfortaa", sans-serif, 'Times New Roman', Times, serif; 
+    
+ margin: 10px;  padding: auto;
+}
+
+/* Style des titres h1 à l'intérieur des div (police et couleur)*/
+div h1 {
+font-family: Bubbleboddy Neue Trial, 'Times New Roman', Times, serif; 
+    
+color: #FDD90B; text-decoration: underline;
+}
+
+/* Style des images(dimensions et bordures. */
+img { width: 70%; height: 40%;
+    
+padding: 5px; border-radius: 10%; }
+
+/* Style général des div */
+div { margin: 20px; padding: auto;}

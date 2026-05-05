@@ -1,0 +1,18 @@
+/* Conteneur global */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+/* Le contenu prend toute la place disponible */
+main {
+  flex: 1;
+  
+}
+
+/* Footer toujours en bas naturellement */
+footer 
+{
+  margin-top: auto;
+}

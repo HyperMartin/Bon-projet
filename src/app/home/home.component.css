@@ -1,0 +1,37 @@
+/* Applique une police personnalisée aux titres h1 et h2 */
+h1, h2 {
+  font-family: 'Bubbleboddy Neue Trial', sans-serif;
+}
+
+/* Applique une autre police aux paragraphes et aux liens */
+p, a {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+/* Style des images à l'intérieur des cartes */
+.card img {
+  height: 220px;          
+  object-fit: contain;    
+}
+
+/* Style global des cartes */
+.card {
+  border: none;           
+  border-radius: 12px;    
+}
+
+/* Style du titre dans une carte */
+.card-title {
+  color: #151217;         
+}
+
+/* Style des liens au survol dans un élément avec l'id "Lien" */
+#Lien a:hover {
+  background-color: #FDD90B !important; 
+}
+
+/* Style spécifique pour les titres h1 */
+h1 {
+  color: #FDD90B;         
+  text-decoration: underline; 
+}

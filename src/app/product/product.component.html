@@ -1,0 +1,63 @@
+<!-- Section affichée uniquement si un produit existe -->
+<section class="py-5" *ngIf="product; else notFound">
+
+  <div class="container">
+
+    <!-- Ligne Bootstrap avec alignement vertical et espacement -->
+    <div class="row align-items-center g-4">
+
+      <!-- Colonne image -->
+      <div class="col-12 col-md-6">
+
+        <!-- Image dynamique du produit -->
+        <img
+          [src]="product.image"   
+          [alt]="product.name"   
+          class="img-fluid rounded shadow-sm" 
+        >
+      </div>
+
+      <!-- Colonne informations produit -->
+      <div class="col-12 col-md-6">
+
+        <!-- Nom du produit -->
+        <h1 class="mb-3">{{ product.name }}</h1>
+
+        <!-- Description -->
+        <p class="mb-4">{{ product.description }}</p>
+
+        <!-- Prix -->
+        <p class="fw-bold fs-4">{{ product.price }} €</p>
+
+        <!-- Bouton retour vers la page d'accueil -->
+        <a 
+          routerLink="/" 
+          class="btn" 
+          style="background-color: #F9D0A3; color: #151217;">
+          Retour à l'accueil
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Template affiché si aucun produit n'est trouvé -->
+<ng-template #notFound>
+
+  <section class="py-5">
+    <div class="container">
+
+      <!-- Message d'erreur -->
+      <h1>Produit introuvable</h1>
+      <p>Le produit demandé n’existe pas.</p>
+
+      <!-- Bouton retour -->
+      <a routerLink="/" class="btn btn-dark">
+        Retour à l'accueil
+      </a>
+
+    </div>
+  </section>
+
+</ng-template>

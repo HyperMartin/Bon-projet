@@ -1,0 +1,86 @@
+<!-- Menu responsive importé de Bootstrap -->
+<section> 
+
+  <!-- Barre de navigation principale -->
+  <nav class="navbar navbar-expand-lg" style="background-color:#151217;">
+
+    <div class="container-fluid">
+      
+      <!-- Logo cliquable redirigeant vers la page d'accueil -->
+      <a class="navbar-brand" routerLink="/">
+        <img src="Logo.PNG" alt="Accueil" title="Accueil">
+      </a>
+
+      <!-- Bouton hamburger visible sur petits écrans -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenu repliable du menu -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Liste des liens de navigation -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <!-- Lien vers la page "A propos" -->
+          <li class="nav-item">
+            <a 
+              class="nav-link active" 
+              aria-current="page" 
+              routerLink="/a-propos" 
+              title="A propos">
+              A propos
+            </a>
+          </li>
+
+          <!-- Lien vers la page "Contact" -->
+          <li class="nav-item">
+            <a 
+              class="nav-link" 
+              routerLink="/contact" 
+              title="Contact">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Formulaire de recherche -->
+        <form 
+          class="d-flex" 
+          role="search" 
+          (ngSubmit)="onSearch()">
+
+          <!-- Champ de saisie lié à Angular (ngModel) -->
+          <input
+            class="form-control me-2"
+            type="search"
+            name="search"
+            [(ngModel)]="searchTerm"
+            placeholder="Entrez votre recherche..."
+            aria-label="Search"
+            required
+          />
+
+          <!-- Bouton de soumission -->
+          <button
+            class="btn"
+            type="submit"
+            style="background-color: greenyellow; color: white; font-weight: bold;">
+            Recherche
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+</section>

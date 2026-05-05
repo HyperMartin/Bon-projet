@@ -1,0 +1,16 @@
+ /*style du titre*/
+ h1 {
+  font-family: 'Bubbleboddy Neue Trial', sans-serif;
+  color: #151217;
+}
+
+/*Styles ppur les images,textes et liens*/
+p, a {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+img {
+  max-height: 450px;
+  object-fit: contain;
+  width: 100%;
+}

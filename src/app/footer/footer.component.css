@@ -1,0 +1,32 @@
+/* Structure globale de la page */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Layout en colonne */
+footer {
+  width: 100%;
+  background-color: #151217;
+  padding: 10px 0;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 3rem;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+img:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
